@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>Trolley</TITLE>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+
+function test_frames(){
+ if (window.name != "shoptrolley"){
+    document.open();
+    document.writeln('<FRAMESET COLS="*,208" BORDER=0 FRAMEBORDER=NO ' +'FRAMESPACING=0>' +'<FRAME SRC="' + "1.htm" + '?x" NAME="shopmain" MARGINWIDTH=2>' +'<FRAMESET ROWS="*,110">' +'<FRAME SRC="trolley.html" NAME="shoptrolley" MARGINWIDTH=13' +' MARGINHEIGHT=5>' +'<FRAME SRC="register.html' + location.search +'" NAME="shopregister">' +'</FRAMESET>' +'</FRAMESET>' +'<NOFRAMES>');
+    document.close();
+ }
+}
+
+  if(parent.shopregister!= null && parent.shopregister.displayBasket != null )
+     parent.shopregister.displayBasket();
+
+
+
+</SCRIPT>
+</HEAD>
+<BODY onLoad="test_frames()">
+</BODY>
+</HTML>
