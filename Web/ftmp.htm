@@ -1,0 +1,20 @@
+<HEAD>
+<TITLE>Pinturas Paleta</TITLE>
+<SCRIPT>
+var mode = 1;
+if (mode == 1)
+    top.location.href = "news.html";
+else{
+   document.open();
+   document.writeln('<FRAMESET COLS="*,208" BORDER=0 FRAMEBORDER=NO ' +
+'FRAMESPACING=0>' +
+'<FRAME SRC="news.html" NAME="shopmain">' +
+'<FRAMESET ROWS="*,130">' +
+'<FRAME SRC="trolley.html" NAME="shoptrolley" BORDER=1 MARGINWIDTH=8' +
+' MARGINHEIGHT=5>' +
+'<FRAME SRC="register.html" NAME="shopregister" SCROLLING=NO>' +
+'</FRAMESET>' + '</FRAMESET>');
+   document.close();
+}
+</SCRIPT>
+</HEAD>

@@ -1,0 +1,172 @@
+<!--   eComm PRO - Order Form Template
+  ==========================================================================-->
+<HTML>
+<HEAD>
+
+
+<!--   Page Title
+  ==========================================================================-->
+<TITLE>Order Form</TITLE>
+
+<!--   Page Style.  This changes color of links to red on mouse over
+  ==========================================================================-->
+  <style type="text/css">A:hover{color: #FF0000;}</style>
+
+</HEAD>
+
+
+<!--   Page definitions, variables are replaced by Scheme colors
+  ==========================================================================-->
+<BODY TEXT=%O_TEXTCOLOR% BGCOLOR=%O_BGCOLOR% LINK=%O_LINKCOLOR% VLINK=%O_VLINKCOLOR% ALINK=%O_ALINKCOLOR%>
+
+
+<ul>
+<center>
+<table cellspacing=0 cellpadding=1 bgcolor=%O_HEADINGCOLOR%><tr><td>
+<table bgcolor=%O_FORMCOLOR% cellpadding=12 cellspacing=0 width=100%><tr><td>
+
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor="%O_HEADINGCOLOR%"><td>
+<B><FONT COLOR="%O_HEADINGTEXTCOLOR%">Order Details:</font></B>
+</td></tr><tr><td>
+<br>
+
+
+
+<!--   Order Details are inserted here
+  ==========================================================================-->
+
+$PrintOrder
+
+</td></tr></table>
+<br>
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor="%O_HEADINGCOLOR%"><td>
+<B><FONT COLOR="%O_HEADINGTEXTCOLOR%">Freight:<i><font size=-1> (Weight: $Weight kg)</i></font></font></B>
+</td></tr><tr><td>
+
+<!--   Select Freight Method, Destination, Calculate and Display Delivery Cost
+  ==========================================================================-->
+
+<table cellspacing=0 cellpadding=0 width=90%><tr>
+<td>Delivery to: 
+<br>$CountryList</td>
+<td><ul>Method: 
+<br>$FreightTypes</td>
+<td><ul>Cost:
+<br><INPUT name=Freight TYPE=TEXT SIZE=10></td>
+</tr></table>
+
+</td></tr></table>
+<br>
+
+
+
+<!--   Credit Card Details
+  ==========================================================================-->
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor="%O_HEADINGCOLOR%"><td>
+<B><FONT COLOR="%O_HEADINGTEXTCOLOR%">Credit Card Details:</font></B>
+</td></tr><tr><td>
+
+<!--   Credity card list
+  ==========================================================================-->
+<br>
+<table width=100% cellpadding=5 cellspacing=0 border=0><tr>
+<td width=150 nowrap>Card Type:</td>
+<td>$ACCEPTED_CARDS</td>
+</tr><tr>
+<td>Card Number:</td>
+<td><INPUT name="CardNumber" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Expiry Date:</td>
+<td><SELECT name="CardExpiryMonth"><OPTION VALUE="">Select Month<OPTION VALUE="01">01<OPTION VALUE="02">02<OPTION VALUE="03">03<OPTION VALUE="04">04<OPTION VALUE="05">05<OPTION VALUE="06">06<OPTION VALUE="07">07<OPTION VALUE="08">08<OPTION VALUE="09">09<OPTION VALUE="10">10<OPTION VALUE="11">11<OPTION VALUE="12">12</SELECT></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td><SELECT name="CardExpiryYear">
+<OPTION VALUE="">Select Year
+<OPTION VALUE="2001" >2001
+<OPTION VALUE="2002" >2002
+<OPTION VALUE="2003" >2003
+<OPTION VALUE="2004" >2004
+<OPTION VALUE="2005" >2005
+<OPTION VALUE="2006" >2006
+<OPTION VALUE="2007" >2007
+<OPTION VALUE="2008" >2008
+<OPTION VALUE="2009" >2009
+<OPTION VALUE="2010" >2010
+<OPTION VALUE="2011" >2011
+<OPTION VALUE="2011" >2012
+</SELECT></td>
+</tr><tr>
+<td>Cardholder Name:</td>
+<td><INPUT name="CardholderName" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Tax:</td>
+<td><INPUT name=Tax TYPE=TEXT VALUE="" SIZE=10></td>
+</tr><tr>
+<td>Total:</td>
+<td><INPUT name=Amount TYPE=TEXT VALUE='$Total' SIZE=10></td>
+</tr></table>
+
+</td></tr></table>
+<br>
+
+
+
+<!--   Customer Contact Details
+  ==========================================================================-->
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor="%O_HEADINGCOLOR%"><td>
+<B><FONT COLOR="%O_HEADINGTEXTCOLOR%">Contact Details:</font></B>
+</td></tr><tr><td>
+<br>
+<table width=100% cellpadding=5 cellspacing=0 border=0><tr>
+<td width=150 nowrap>Name:</td>
+<td><INPUT name="Name" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Street:</td>
+<td><INPUT name="Street" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>City/Town:</td>
+<td><INPUT name="City" TYPE="TEXT" SIZE=30 ALIGN=left HSPACE=50></td>
+</tr><tr>
+<td>State/Province:</td>
+<td><INPUT name="State" TYPE="TEXT" SIZE=30 ALIGN=left HSPACE=50></td>
+</tr><tr>
+<td>Zip/PostCode:</td>
+<td><INPUT name="Postcode" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Country:</td>
+<td><INPUT name="Country" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr><tr>
+<td>Telephone:</td>
+<td><INPUT name="Phone" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Fax:</td>
+<td><INPUT name="Fax" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Email:</td>
+<td><INPUT name="Email" TYPE="TEXT" SIZE=30 ALIGN=left></td>
+</tr></table>
+
+<!--   Submit Order Button
+  ==========================================================================-->
+<p align=center><INPUT TYPE="SUBMIT" VALUE=" Submit Order "></p>
+
+
+</td></tr></table>
+</FORM>
+
+
+</td></tr></table>
+</td></tr><tr><td>
+<b><font color=%O_HEADINGTEXTCOLOR%><center>
+$MESSAGE
+</font></b><br><br>
+</td></tr></table>
+
+</center>
+</BODY>
+</HTML>

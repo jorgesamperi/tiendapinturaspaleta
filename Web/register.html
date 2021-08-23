@@ -1,0 +1,251 @@
+<HTML>
+
+<BODY TEXT="#060000" BGCOLOR="BLACK" LINK="#900000" VLINK="PURPLE" ALINK="YELLOW" onLoad="reg()" BACKGROUND=>
+
+<FORM NAME="inputForm" METHOD=POST TARGET="orderForm" ACTION="https://ecomm.vendercom.com/">
+
+
+    <TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0><TR><TD>
+    <TABLE BORDER=0 WIDTH=178 CELLPADDING=1 CELLSPACING=0 BGCOLOR="#9E4545"><TR><TD>
+    <TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0 BGCOLOR="#99090C"><TR><TD ALIGN=CENTER>
+
+    <INPUT TYPE=HIDDEN NAME="Version" VALUE="2.08">
+    <INPUT TYPE=HIDDEN NAME="OrderID" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="Weight" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="AddFreight" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="TaxVal" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="ReferalID" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="PrintOrder" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="PROD" VALUE="">
+    <INPUT TYPE=HIDDEN NAME="SN" VALUE="VC1000">
+    <INPUT TYPE=HIDDEN NAME="ThankYou" VALUE="<HTML><HEAD><TITLE>Order Confirmation</TITLE></HEAD><BODY TEXT=BLACK BGCOLOR=WHITE LINK=#900000 VLINK=PURPLE ALINK=YELLOW></center></td><td valign=top width=85%><ul><b><font size=+2><center>Gracias por su compra</font></b><br><br><hr></center></td></tr></table></BODY></HTML>">
+    <INPUT TYPE=HIDDEN NAME="Freight" VALUE="(gt(0<=0.5k););">
+    <INPUT TYPE=HIDDEN NAME="Template" VALUE="
+<HTML>
+<HEAD>
+
+
+
+<TITLE>Order Form</TITLE>
+
+
+  <style type=%22text/css%22>A:hover{color: #FF0000;}</style>
+
+</HEAD>
+
+
+
+<BODY TEXT=BLACK BGCOLOR=WHITE LINK=#900000 VLINK=PURPLE ALINK=YELLOW>
+
+
+<ul>
+<center>
+<table cellspacing=0 cellpadding=1 bgcolor=#900000><tr><td>
+<table bgcolor=#DFAEB6 cellpadding=12 cellspacing=0 width=100%><tr><td>
+
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor=%22#900000%22><td>
+<B><FONT COLOR=%22WHITE%22>Order Details:</font></B>
+</td></tr><tr><td>
+<br>
+
+
+
+
+
+$PrintOrder
+
+</td></tr></table>
+<br>
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor=%22#900000%22><td>
+<B><FONT COLOR=%22WHITE%22>Freight:<i><font size=-1> (Weight: $Weight kg)</i></font></font></B>
+</td></tr><tr><td>
+
+
+
+<table cellspacing=0 cellpadding=0 width=90%><tr>
+<td>Delivery to: 
+<br>$CountryList</td>
+<td><ul>Method: 
+<br>$FreightTypes</td>
+<td><ul>Cost:
+<br><INPUT name=Freight TYPE=TEXT SIZE=10></td>
+</tr></table>
+
+</td></tr></table>
+<br>
+
+
+
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor=%22#900000%22><td>
+<B><FONT COLOR=%22WHITE%22>Credit Card Details:</font></B>
+</td></tr><tr><td>
+
+
+<br>
+<table width=100% cellpadding=5 cellspacing=0 border=0><tr>
+<td width=150 nowrap>Card Type:</td>
+<td><SELECT NAME=%22CardType%22>
+<OPTION VALUE=%22Visa%22>Visa
+<OPTION VALUE=%22MasterCard%22>MasterCard
+<OPTION VALUE=%22American Express%22>American Express
+</SELECT></td>
+</tr><tr>
+<td>Card Number:</td>
+<td><INPUT name=%22CardNumber%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Expiry Date:</td>
+<td><SELECT name=%22CardExpiryMonth%22><OPTION VALUE=%22%22>Select Month<OPTION VALUE=%2201%22>01<OPTION VALUE=%2202%22>02<OPTION VALUE=%2203%22>03<OPTION VALUE=%2204%22>04<OPTION VALUE=%2205%22>05<OPTION VALUE=%2206%22>06<OPTION VALUE=%2207%22>07<OPTION VALUE=%2208%22>08<OPTION VALUE=%2209%22>09<OPTION VALUE=%2210%22>10<OPTION VALUE=%2211%22>11<OPTION VALUE=%2212%22>12</SELECT></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td><SELECT name=%22CardExpiryYear%22>
+<OPTION VALUE=%22%22>Select Year
+<OPTION VALUE=%222001%22 >2001
+<OPTION VALUE=%222002%22 >2002
+<OPTION VALUE=%222003%22 >2003
+<OPTION VALUE=%222004%22 >2004
+<OPTION VALUE=%222005%22 >2005
+<OPTION VALUE=%222006%22 >2006
+<OPTION VALUE=%222007%22 >2007
+<OPTION VALUE=%222008%22 >2008
+<OPTION VALUE=%222009%22 >2009
+<OPTION VALUE=%222010%22 >2010
+<OPTION VALUE=%222011%22 >2011
+<OPTION VALUE=%222011%22 >2012
+</SELECT></td>
+</tr><tr>
+<td>Cardholder Name:</td>
+<td><INPUT name=%22CardholderName%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Tax:</td>
+<td><INPUT name=Tax TYPE=TEXT VALUE=%22%22 SIZE=10></td>
+</tr><tr>
+<td>Total:</td>
+<td><INPUT name=Amount TYPE=TEXT VALUE='$Total' SIZE=10></td>
+</tr></table>
+
+</td></tr></table>
+<br>
+
+
+
+
+<table width=100% cellpadding=4 cellspacing=0><tr bgcolor=%22#900000%22><td>
+<B><FONT COLOR=%22WHITE%22>Contact Details:</font></B>
+</td></tr><tr><td>
+<br>
+<table width=100% cellpadding=5 cellspacing=0 border=0><tr>
+<td width=150 nowrap>Name:</td>
+<td><INPUT name=%22Name%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Street:</td>
+<td><INPUT name=%22Street%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>City/Town:</td>
+<td><INPUT name=%22City%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left HSPACE=50></td>
+</tr><tr>
+<td>State/Province:</td>
+<td><INPUT name=%22State%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left HSPACE=50></td>
+</tr><tr>
+<td>Zip/PostCode:</td>
+<td><INPUT name=%22Postcode%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Country:</td>
+<td><INPUT name=%22Country%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr><tr>
+<td>Telephone:</td>
+<td><INPUT name=%22Phone%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Fax:</td>
+<td><INPUT name=%22Fax%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr><tr>
+<td>Email:</td>
+<td><INPUT name=%22Email%22 TYPE=%22TEXT%22 SIZE=30 ALIGN=left></td>
+</tr></table>
+
+
+<p align=center><INPUT TYPE=%22SUBMIT%22 VALUE=%22 Submit Order %22></p>
+
+
+</td></tr></table>
+</FORM>
+
+
+</td></tr></table>
+</td></tr><tr><td>
+<b><font color=WHITE><center>
+This form is running on an eComm Secure Server.<br>
+All information will be encrypted before transmission.
+</font></b><br><br>
+</td></tr></table>
+
+</center>
+</BODY>
+</HTML>
+">
+
+    <FONT FACE="Helvetica" SIZE=+1 COLOR=#FE9A8F>Total: <B>$</B></FONT><INPUT SIZE=6
+	NAME="Total" VALUE="" onBlur="this.value = sumTotal()">
+
+    <BR><FONT FACE="Helvetica"><INPUT TYPE=SUBMIT NAME="checkout" VALUE="Go to Checkout"></FONT>
+    </TD></TR></TABLE>
+    </TD></TR></TABLE>
+    </TD></TR></TABLE>
+</CENTER>
+
+</FORM>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript" SRC="ecomm.js"> </SCRIPT>
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+
+<!--
+var mode = 1;
+if (mode == 1){
+   info = parent.info();
+   if (info.indexOf("add") > -1){
+      startIndex = info.indexOf("&");      
+      info = info.substring(startIndex+1,info.length);
+      itemArray = info.split("	");
+      parent.shopregister.addItem(itemArray[0],itemArray[1],itemArray[2],itemArray[3],itemArray[4],parseInt(itemArray[5]),itemArray[6],itemArray[7],itemArray[8],itemArray[9],itemArray[10]);       
+   }     
+}
+
+function reg(){
+
+if (window.name != "shopregister"){
+    document.open();
+    document.writeln('<FRAMESET COLS="*,208" BORDER=0 FRAMEBORDER=NO ' +'FRAMESPACING=0>' +'<FRAME SRC="' + "1.htm" + '?x" NAME="shopmain" MARGINWIDTH=2>' +'<FRAMESET ROWS="*,110">' +'<FRAME SRC="trolley.html" NAME="shoptrolley" MARGINWIDTH=13' +' MARGINHEIGHT=5>' +'<FRAME SRC="register.html' + location.search +'" NAME="shopregister">' +'</FRAMESET>' +'</FRAMESET>' +'<NOFRAMES>');
+    document.close();
+    return;
+}
+
+  parent.shopregister.t_she=new parent.shopregister.sche(
+   'YELLOW'
+  ,'BLACK'
+  ,'#9E4545'
+  ,''
+  ,'PURPLE'
+  ,'#99090C'
+  ,'#060000'
+  ,'#900000'
+  ,'WHITE'
+  ,'0'
+  ,'0'
+  ,'0'
+  ,'#FE9A8F'
+  ,''
+  ,'$'
+  );
+
+ parent.shopregister.showBasket()
+}    
+// -->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

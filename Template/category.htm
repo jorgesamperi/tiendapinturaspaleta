@@ -1,0 +1,170 @@
+<!--  eComm PRO - Category Template (Stylish - Plain)
+  ==========================================================================-->
+<!--Version 2.01.002 -->
+<HTML>
+<HEAD>
+
+
+<!--   Page Title
+  ==========================================================================-->
+  <TITLE>$META_TITLE</TITLE>
+
+
+<!--   Meta Tags used by Search Engines
+  ==========================================================================-->
+  <META NAME="description" content="$META_DESCRIPTION">
+  <META NAME="keywords" CONTENT="$META_KEYWORDS">
+  <META NAME="generator" content="eComm PRO v$VERSION">
+  <META NAME="resource-type" content="document">
+  <META NAME="distribution" content="Global">
+  <META NAME="robots" content="All">
+  <META NAME="copyright" content="$COPYRIGHT">
+
+
+<!--   Page Style.  This changes color of links to red on mouse over
+  ==========================================================================-->
+  <style type="text/css">A:hover{color:%ALINKCOLOR%;}
+.m {font-size: 8pt; font-family:verdana,helvetica,arial; font-weight:normal;}
+.b {font-size: 8pt; font-family:verdana,helvetica,arial; font-weight:bold;}
+  </style>
+
+  </HEAD>
+
+
+<!--   Inserts Rebuild Frame Code
+       This code will rebuild the store frames regardless of where a user
+       enters the store.
+  ==========================================================================-->
+  $FRAME
+
+
+<!--   Page definitions, variables are replaced by Scheme colors
+  ==========================================================================-->
+  <BODY TEXT=%TEXTCOLOR% BGCOLOR=%BGCOLOR% LINK=%LINKCOLOR% VLINK=%VLINKCOLOR% ALINK=%ALINKCOLOR% topmargin=0 leftmargin=0 marginheight=0 marginwidth=0>
+
+
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<tr>
+<td ALIGN=CENTER VALIGN=TOP>
+
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% BACKGROUND="r1_homet.png">
+<tr ALIGN=CENTER VALIGN=CENTER>
+<td ALIGN=LEFT WIDTH=8><img src="r1_homet.png" BORDER=0 align=TEXTTOP></td>
+
+<td ALIGN=CENTER VALIGN=middle WIDTH=0 >
+<a href="$HOMELINK"><img src="%LOGO%" BORDER=0 align=texttop></a>&nbsp;</td>
+
+<td ALIGN=RIGHT VALIGN=TOP WIDTH=40><img src="r1_homecon.png" BORDER=0 align=TEXTTOP></td>
+</tr>
+
+<tr>
+<td WIDTH=8><img SRC="r1_top.png"></td>
+
+<td ALIGN=LEFT VALIGN=TOP WIDTH=0>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 width=180>
+<tr>
+<td ALIGN=LEFT>
+
+<!-- Menu start -->
+
+<!--   Create the Product Navigation Index here
+  ==========================================================================-->
+  $INDEX
+
+<!--
+ = ============================
+  Product Search 
+  =============================
+-->
+<SEARCH>
+<br>
+<table cellspacing=6><tr><td>
+<FORM METHOD="GET" ACTION="$SEARCHURL">
+<table><tr><td class=b>
+Search:<br>
+<INPUT name="id" TYPE=HIDDEN value="$SEARCHID">
+<INPUT name="query" TYPE=TEXT SIZE=15 ALIGN=left>
+</td><td valign=bottom><center><INPUT TYPE="SUBMIT" VALUE="Go">
+</td></tr></table>
+</td></tr></table>
+</FORM>
+</SEARCH>
+
+
+
+
+
+<br><img SRC="r1_itembar.png" BORDER=0 align=TEXTTOP>&nbsp;
+</td></tr>
+</table>
+</td>
+
+<td WIDTH=40 BACKGROUND="r1_right.png"><img src=r1_right.png></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<tr ALIGN=CENTER VALIGN=CENTER>
+<td ALIGN=LEFT WIDTH=29 BACKGROUND="r1_l-b.png"><img SRC="r1_l-b.png" BORDER=0 align=TEXTTOP></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH=100% BACKGROUND="r1_bottom.png">
+<img SRC="r1_bottom.png" BORDER=0 align=TEXTTOP ></td>
+
+<td ALIGN=right WIDTH=59 BACKGROUND="r1_r-b.png"><img SRC="r1_r-b.png" BORDER=0 align=TEXTTOP></td>
+</tr></table>
+
+<br>&nbsp;
+<p>&nbsp;</td>
+
+<td ALIGN=LEFT VALIGN=TOP WIDTH=100%>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<tr>
+<td ALIGN=LEFT BACKGROUND="r1_topbac.png" VALIGN=TOP width=100%>
+<!--   Insert Back Button
+  ==========================================================================-->
+  <a HREF="$BACK"><img src="r1_back.png" border=0 alt="Back" align=TEXTTOP></a></td>
+
+<!-- Uncomment to add Purchase/back/Remove buttons to category
+<a HREF="$BACK"><img src="r1_back.png" border=0 alt="Back" align=TEXTTOP></a></td>
+<td ALIGN=left VALIGN=TOP BACKGROUND="r1_topbac.png" width=100%>
+ <A HREF="$ADD"><img src="r1_add.png" border=0></a><a HREF="$REMOVE"><img src="r1_remove.png" border=0></a></td>
+-->
+
+<td ALIGN=RIGHT VALIGN=TOP width=32><img src="r1_topcon.png" BORDER=0 align=texttop>
+</td></tr></table>
+
+<center>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<tr VALIGN=CENTER>
+
+<td VALIGN=TOP WIDTH=0>
+<br>
+<!-- Product name start -->
+<b><font face="Verdana, Arial" color="%TITLECOLOR%" size=+2>$PAGETITLE</font></b>
+<br><br>
+
+<!-- IMAGE starts -->
+<a href="$LINK" target=_new><img src="$IMAGE" ALT="$TITLE" BORDER=0></a><br>
+<!--   User Fields 1-6
+  ==========================================================================-->
+<USER>
+  <TABLE>
+  <tr><td valign=top>$LABEL1</td><td>$FIELD1</td></tr>
+  <tr><td valign=top>$LABEL2</td><td>$FIELD2</td></tr>
+  <tr><td valign=top>$LABEL3</td><td>$FIELD3</td></tr>
+  <tr><td valign=top>$LABEL4</td><td>$FIELD4</td></tr>
+  <tr><td valign=top>$LABEL5</td><td>$FIELD5</td></tr>
+  <tr><td valign=top>$LABEL6</td><td>$FIELD6</td></tr>
+  </TABLE>
+<br>
+</USER>
+$BODY
+</td></tr></table>
+</td></tr></table>
+
+</body>
+</html>

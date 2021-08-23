@@ -1,0 +1,31 @@
+; Ecomm Index File
+; v2.08
+VERSION=2.08.002
+TITLE=Pinturas Paleta
+CURRENCY=$
+COUNTRY=Guatemala
+#4|'Inicio'||'36.htm'|'r1_home.png'|||
+#4|'Nuestros Servicios'||'25.htm'|'servicios.jpg'|||
+#1|'Domestic Wall'|'310'|'11.htm'|'domestic wall.jpg'|||
+#1|'Domestic Plus'|'225'|'12.htm'|'domestic plus.jpg'|||
+#1|'Standard'|'168'|'13.htm'|'standard.jpg'|||
+#0|'Latex'||'5.htm'||||
+#1|'Domestic Ultra'|'415'|'14.htm'|'domestic ultra.jpg'|||
+#1|'Domestic Enamel'|'307'|'15.htm'|'domestic enamel.jpg'|||
+#1|'Domestic Gloss'|'219'|'16.htm'|'domestic gloss.jpg'|||
+#0|'Esmalte'||'6.htm'||||
+#1|'Rustmaster Estructural'|'289'|'17.htm'|'rustmaster estructural.jpg'|||
+#1|'Rustmaster Domestico'|'199'|'21.htm'|'rustmaster domestico.jpg'|||
+#0|'Anticorrosivos'||'8.htm'||||
+#1|'Waterlock 5 años'|'335'|'18.htm'|'waterlock 5 años.jpg'|||
+#1|'Waterlock 3 años'|'250'|'19.htm'|'waterlock 3 años.jpg'|||
+#1|'Dry Master'|'350'|'20.htm'|'drymaster.jpg'|||
+#0|'Impermeabilizantes'||'10.htm'||||
+#0|'Productos'||'index.html'|'principal.jpg'|||
+#4|'Noticias'||'news.html'|'noticias.jpg'|'https://jorgedavidsamperip.wixsite.com/tiendapinturaspaleta'|'CLICK PARA IR A NUESTRO BLOG DE NOTICIAS'|
+#4|'Quienes Somos'||'about.html'|'quienes somos.jpg'|||
+#4|'Contacto'||'contact.html'|'contacto.jpg'|||
+#4|'Ubicacion'||'22.htm'|'como llegar.jpg'|'https://www.waze.com/es-419/live-map/directions?navigate=yes&to=ll.14.6392%2C-90.512783'||
+#4|'Preguntas Frecuentes'||'23.htm'|'preguntas frecuentes.jpg'|||
+#4|'Invierta con Nosotros'||'24.htm'|'domestic wall.jpg'|'https://www.youtube.com/watch?v=FjejIOtvABg'||
+#0|'Siguenos'||'34.htm'|'nuestras redes.jpg'|||
